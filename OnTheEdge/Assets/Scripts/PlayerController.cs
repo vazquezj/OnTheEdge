@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 		float rotation = Input.GetAxis ("Horizontal") * rotationSpeed;
 		translation *= Time.deltaTime;
 		rotation *= Time.deltaTime;
-		transform.Translate (rotation, 0, translation);
+		transform.Translate (rotation, translation, 0);
 
 		/*if (Input.GetKeyDown ("escape"))
 		{
