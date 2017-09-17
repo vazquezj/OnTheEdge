@@ -16,9 +16,14 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth = startingHealth;
 	}
 
-	/*public void TakeDamage (float amount)
+	void OnGUI ()
+	{
+		GUI.Label (new Rect (100, 50, 50, 50), currentHealth + "/" + startingHealth);
+	}
+
+	public void TakeDamage (float amount)
 	{
 		currentHealth -= amount;
 		//healthSlider.value = currentHealth;
-	}*/
+	}
 }

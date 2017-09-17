@@ -6,11 +6,17 @@ public class PlayerController : MonoBehaviour {
 
 	public float translationSpeed;
 	public float rotationSpeed;
+	PlayerHealth playerHealth;
+
+	void Awake ()
+	{
+		playerHealth = GetComponent <PlayerHealth> ();
+	}
 
 	/*void Start ()
-		{
+	{
 			Cursor.lockState = CursorLockMode.Locked;
-		}*/
+	}*/
 
 	void Update ()
 	{
@@ -24,5 +30,13 @@ public class PlayerController : MonoBehaviour {
 		{
 				Cursor.lockState = CursorLockMode.None;
 		}*/
+	}
+
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.tag == "Player")
+		{
+			playerHealth.currentHealth -= 5;
+		}
 	}
 }
