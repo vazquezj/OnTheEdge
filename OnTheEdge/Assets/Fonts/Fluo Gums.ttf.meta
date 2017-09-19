@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c0d52450277e96a41b8f4f5efe7e62ed
+timeCreated: 1505848924
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Fluo Gums
+  fontNames:
+  - Fluo Gums
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
