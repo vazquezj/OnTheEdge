@@ -13,7 +13,7 @@ public class StartMenu : MonoBehaviour {
 
 	void OnGUI ()
 	{
-		GUI.Box (new Rect (156, 25, 500, 400), "");
-		GUI.Label (new Rect (406, 50, 100, 50), "ON THE EDGE", myFont);
+		GUI.Box (new Rect (240, 80, 500, 400), "");
+		GUI.Label (new Rect (450, 100, 100, 30), "ON THE EDGE", myFont);
 	}
 }
