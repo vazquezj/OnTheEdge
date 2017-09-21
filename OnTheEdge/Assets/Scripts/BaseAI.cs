@@ -59,6 +59,9 @@ public abstract class BaseAI : MonoBehaviour {
 	public void SetAtkCld(float newCld) {
 		atkCld = newCld;
 	}
+	public void SetCooldown(float newCld) {
+		timeToAttack = newCld;
+	}
 	public void TakeDamage(float dmg) {
 		health -= dmg;
 	}
@@ -70,15 +73,7 @@ public abstract class BaseAI : MonoBehaviour {
 	}
 
 	//Attacks target
-	public void Attack(BaseAI enemy) {
-		if (atkTar != null) {
-			enemy.TakeDamage (this.atkDmg);
-			if (enemy.health <= 0)
-				atkTar = null;
-			timeToAttack = atkCld;
-			Debug.Log (enemy.health);
-		}
-	}
+	public abstract void Attack(BaseAI enemy);
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -109,6 +104,9 @@ public abstract class BaseAI : MonoBehaviour {
 					Attack (enemy);
 				}
 			}
+			//Temporary death effect
+		} else {
+			GameObject.Destroy (gameObject);
 		}
 	}
 

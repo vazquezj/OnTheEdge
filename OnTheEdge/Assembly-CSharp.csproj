@@ -55,8 +55,11 @@
      <Compile Include="Assets\Scripts\Barricade.cs" />
      <Compile Include="Assets\Scripts\BaseAI.cs" />
      <Compile Include="Assets\Scripts\BasicUnit.cs" />
+     <Compile Include="Assets\Scripts\CircleUnit.cs" />
      <Compile Include="Assets\Scripts\RegenTile.cs" />
+     <Compile Include="Assets\Scripts\SquareUnit.cs" />
      <Compile Include="Assets\Scripts\StartMenu.cs" />
+     <Compile Include="Assets\Scripts\TriangleUnit.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
