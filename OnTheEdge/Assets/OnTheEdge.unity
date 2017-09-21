@@ -205,6 +205,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  myTexture: {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &601659446
 MonoBehaviour:
   m_ObjectHideFlags: 0
