@@ -6,12 +6,13 @@ public abstract class BaseAI : MonoBehaviour {
 
 	//Public targets for attacking and general movement, as well as owner tag
 	public Vector2 tarPos;
-	public GameObject atkTar;
+	public GameObject atkTar = null;
 
 	//Private variables
 	float movSpd;
 	float atkDis;
 	float health;
+	float maxHealth;
 	float atkDmg;
 	float atkCld;
 	float timeToAttack = 0;
@@ -34,7 +35,17 @@ public abstract class BaseAI : MonoBehaviour {
 		return health;
 	}
 	public void SetHealth(float h) {
-		health = h;
+		if (h <= maxHealth) {
+			health = h;
+		} else {
+			health = maxHealth;
+		}
+	}
+	public float GetMaxHealth() {
+		return maxHealth;
+	}
+	public void SetMaxHealth(float h) {
+		maxHealth = h;
 	}
 	public float GetAtkDmg() {
 		return atkDmg;
@@ -48,6 +59,9 @@ public abstract class BaseAI : MonoBehaviour {
 	public void SetAtkCld(float newCld) {
 		atkCld = newCld;
 	}
+	public void SetCooldown(float newCld) {
+		timeToAttack = newCld;
+	}
 	public void TakeDamage(float dmg) {
 		health -= dmg;
 	}
@@ -59,12 +73,7 @@ public abstract class BaseAI : MonoBehaviour {
 	}
 
 	//Attacks target
-	public void Attack(BaseAI enemy) {
-		enemy.TakeDamage (this.atkDmg);
-		if (enemy.health <= 0)
-			atkTar = null;
-		timeToAttack = atkCld;
-	}
+	public abstract void Attack(BaseAI enemy);
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -90,11 +99,14 @@ public abstract class BaseAI : MonoBehaviour {
 				}
 
 				//Attacks enemy if able
-				if (timeToAttack <= 0 && atkDis >= Vector2.Distance (gameObject.transform.position, atkTar.transform.position)) {
+				if (atkTar != null && timeToAttack <= 0 && atkDis >= Vector2.Distance (gameObject.transform.position, atkTar.transform.position)) {
 					BaseAI enemy = atkTar.GetComponent<BaseAI> ();
 					Attack (enemy);
 				}
 			}
+			//Temporary death effect
+		} else {
+			GameObject.Destroy (gameObject);
 		}
 	}
 
@@ -106,7 +118,7 @@ public abstract class BaseAI : MonoBehaviour {
 			if (newEnemy != null && other.tag != this.tag && newEnemy.GetPriority () > enemy.GetPriority ()) {
 				atkTar = other.gameObject;
 			} 
-		} else {
+		} else if (newEnemy != null && other.tag != this.tag && newEnemy.health > 0) {
 			atkTar = other.gameObject;
 		}
 	}

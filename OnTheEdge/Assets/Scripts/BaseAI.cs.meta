@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7e1392472c2506240b52484f840e0e91
 timeCreated: 1505965990
+=======
+guid: 17312df2fbc1823498b3bc48a169c457
+timeCreated: 1505880530
+>>>>>>> origin/Avery's_Branch
 licenseType: Free
 MonoImporter:
   serializedVersion: 2

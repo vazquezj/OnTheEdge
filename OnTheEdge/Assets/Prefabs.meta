@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 26e1b0fb163e1ef4a9bb8d114a8b9538
 folderAsset: yes
 timeCreated: 1505965990
@@ -8,6 +9,11 @@ guid: 19d6bfccd1acd4149a5d63e4d8042364
 folderAsset: yes
 timeCreated: 1506100387
 >>>>>>> origin/Alex's-Branch
+=======
+guid: e2fa47c5fb9a4794e80b1198afee4b22
+folderAsset: yes
+timeCreated: 1505880525
+>>>>>>> origin/Avery's_Branch
 licenseType: Free
 DefaultImporter:
   userData: 
