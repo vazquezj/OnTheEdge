@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnerForDefender.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerHealth.cs" Line="28" Column="3" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="40" Column="4" />
+      <File FileName="Assets\Scripts\SpawnerForAttacker.cs" Line="5" Column="63" />
+      <File FileName="Assets\Scripts\SpawnerForDefender.cs" Line="53" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

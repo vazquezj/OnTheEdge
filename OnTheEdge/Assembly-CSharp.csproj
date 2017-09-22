@@ -53,7 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseAI.cs" />
      <Compile Include="Assets\Scripts\BasicUnit.cs" />
-     <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\SpawnerForAttacker.cs" />
+     <Compile Include="Assets\Scripts\SpawnerForDefender.cs" />
      <Compile Include="Assets\Scripts\StartMenu.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
