@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6778b45b81455e241a2dc56ca9caee4e
 timeCreated: 1505859652
 licenseType: Pro
 NativeFormatImporter:
   mainObjectFileID: 15600000
+=======
+guid: 79a2da8065d35574c949816e2e5f264d
+timeCreated: 1506100388
+licenseType: Free
+NativeFormatImporter:
+  mainObjectFileID: 0
+>>>>>>> origin/Alex's-Branch
   userData: 
   assetBundleName: 
   assetBundleVariant: 

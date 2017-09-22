@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 26e1b0fb163e1ef4a9bb8d114a8b9538
 folderAsset: yes
 timeCreated: 1505965990
+=======
+guid: 19d6bfccd1acd4149a5d63e4d8042364
+folderAsset: yes
+timeCreated: 1506100387
+>>>>>>> origin/Alex's-Branch
 licenseType: Free
 DefaultImporter:
   userData: 

@@ -86,11 +86,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1036965358722302}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: bc0a15d3b7af1804592ae8000b5ef254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tarPos: {x: 0, y: 0}
   atkTar: {fileID: 0}
+=======
+  m_Script: {fileID: 11500000, guid: 7e1392472c2506240b52484f840e0e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> origin/Alex's-Branch
 --- !u!212 &212286694651558734
 SpriteRenderer:
   m_ObjectHideFlags: 1
