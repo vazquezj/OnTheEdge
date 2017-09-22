@@ -23,7 +23,7 @@ public class SpawnerForAttacker : MonoBehaviour {
 			//sets the z position to 0
 			mousePos.z = 0;
 			//sets the y position to the bottom of the screen
-			mousePos.y = -4.5;
+			mousePos.y = -4;
 			Debug.Log (mousePos.x);
 			Debug.Log (mousePos.y);
 
@@ -44,7 +44,7 @@ public class SpawnerForAttacker : MonoBehaviour {
 			//sets the z position to 0
 			mousePos.z = 0;
 			//sets the y position to the bottom of the screen
-			mousePos.y = -4.5;
+			mousePos.y = -4;
 			Debug.Log (mousePos.x);
 			Debug.Log (mousePos.y);
 
@@ -65,7 +65,7 @@ public class SpawnerForAttacker : MonoBehaviour {
 			//sets the z position to 0
 			mousePos.z = 0;
 			//sets the y position to the bottom of the screen
-			mousePos.y = -4.5;
+			mousePos.y = -4;
 
 			//Instantiates and object from whatToSpawnPrefabs array list at (mouse's x , -4.5, 0)
 			Instantiate (whatToSpawnPrefab [0], mousePos, Quaternion.identity);

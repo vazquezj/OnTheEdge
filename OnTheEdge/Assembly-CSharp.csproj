@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseAI.cs" />
      <Compile Include="Assets\Scripts\BasicUnit.cs" />
+     <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
      <Compile Include="Assets\Scripts\SpawnerForAttacker.cs" />
      <Compile Include="Assets\Scripts\SpawnerForDefender.cs" />
      <Compile Include="Assets\Scripts\StartMenu.cs" />
