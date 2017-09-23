@@ -7,7 +7,11 @@ public class TriangleUnit : BaseAI {
 	//Attacks target
 	public override void Attack(BaseAI enemy) {
 		if (atkTar != null) {
-			enemy.TakeDamage (this.GetAtkDmg());
+			if (this.GetBoosted ()) {
+				enemy.TakeDamage (this.GetAtkDmg () + 1);
+			} else {
+				enemy.TakeDamage (this.GetAtkDmg ());
+			}
 			if (enemy.GetHealth() <= 0)
 				atkTar = null;
 			this.SetCooldown(this.GetAtkCld());

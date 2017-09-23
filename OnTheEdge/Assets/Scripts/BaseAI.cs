@@ -16,7 +16,9 @@ public abstract class BaseAI : MonoBehaviour {
 	float atkDmg;
 	float atkCld;
 	float timeToAttack = 0;
+	float boostTime;
 	int priority;
+	bool boosted;
 
 	//Getter/setter functions
 	public float GetMovSpd() {
@@ -71,6 +73,15 @@ public abstract class BaseAI : MonoBehaviour {
 	public void SetPriority(int nP) {
 		priority = nP;
 	}
+	public void SetBoost(bool state) {
+		boosted = state;
+	}
+	public bool GetBoosted() {
+		return boosted;
+	}
+	public void SetBoostTime(float newTime) {
+		boostTime = newTime;
+	}
 
 	//Attacks target
 	public abstract void Attack(BaseAI enemy);
@@ -104,6 +115,13 @@ public abstract class BaseAI : MonoBehaviour {
 					Attack (enemy);
 				}
 			}
+
+			//Changes boost timer, and disables attack boost once it runs out
+			boostTime -= Time.deltaTime;
+			if (boostTime <= 0) {
+				boosted = false;
+			}
+
 			//Temporary death effect
 		} else {
 			GameObject.Destroy (gameObject);
