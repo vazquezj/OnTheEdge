@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartMenu : MonoBehaviour {
 
 	public GUIStyle myFont;
-	public Texture2D myTexture;
+	public GUISkin myGUISkin;
 
 	void Awake ()
 	{
@@ -14,12 +14,14 @@ public class StartMenu : MonoBehaviour {
 
 	void OnGUI ()
 	{
+		//Changes the GUI Skin
+		GUI.skin = myGUISkin;
 		//Start Menu Box and Text
-		GUI.Box (new Rect (280, 80, 500, 400), "");
-		GUI.Label (new Rect (480, 100, 100, 30), "ON THE EDGE", myFont);
+		GUI.Box (new Rect (0, 0, 1920, 1080), "");
+		GUI.Label (new Rect (560, 100, 300, 150 ), "ON THE EDGE", myFont);
 		//Start Menu Button and Text
-		GUI.Label (new Rect (480, 430, 100, 50), "START!", myFont);
-		if (GUI.Button (new Rect (455, 430, 150, 50), ""))
+		GUI.Label (new Rect (660, 600, 300, 150), "START!", myFont);
+		if (GUI.Button (new Rect (650, 600, 330, 110), ""))
 		{
 			Destroy (this);
 		}
