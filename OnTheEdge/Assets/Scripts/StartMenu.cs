@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour {
 
-	public GUIStyle myFont;
 	public GUISkin myGUISkin;
 
 	void Awake ()
@@ -17,11 +16,9 @@ public class StartMenu : MonoBehaviour {
 		//Changes the GUI Skin
 		GUI.skin = myGUISkin;
 		//Start Menu Box and Text
-		GUI.Box (new Rect (0, 0, 1920, 1080), "");
-		GUI.Label (new Rect (560, 100, 300, 150 ), "ON THE EDGE", myFont);
+		GUI.Box (new Rect (50, 50, 1516, 810), "ON THE EDGE");
 		//Start Menu Button and Text
-		GUI.Label (new Rect (660, 600, 300, 150), "START!", myFont);
-		if (GUI.Button (new Rect (650, 600, 330, 110), ""))
+		if (GUI.Button (new Rect (708, 600, 200, 100), "START!"))
 		{
 			Destroy (this);
 		}
