@@ -26,8 +26,9 @@ public class TriangleUnit : BaseAI {
 		this.SetMaxHealth (2f);
 		this.SetHealth (2f);
 		this.SetAtkDmg (1f);
-		this.SetAtkCld (2f);
+		this.SetAtkCld (1.5f);
 		this.SetPriority (1);
+		this.SetSource (gameObject.GetComponent<AudioSource> ());
 	}
 }
 

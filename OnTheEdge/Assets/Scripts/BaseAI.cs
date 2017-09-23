@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent (typeof (AudioSource))]
 
 public abstract class BaseAI : MonoBehaviour {
 
 	//Public targets for attacking and general movement, as well as owner tag
 	public Vector2 tarPos;
 	public GameObject atkTar = null;
+
+	//Public variables for SFX
+	public AudioClip hit;
+	public AudioClip mov;
 
 	//Private variables
 	float movSpd;
@@ -19,6 +24,7 @@ public abstract class BaseAI : MonoBehaviour {
 	float boostTime;
 	int priority;
 	bool boosted;
+	AudioSource sfx;
 
 	//Getter/setter functions
 	public float GetMovSpd() {
@@ -82,6 +88,9 @@ public abstract class BaseAI : MonoBehaviour {
 	public void SetBoostTime(float newTime) {
 		boostTime = newTime;
 	}
+	public void SetSource(AudioSource source) {
+		this.sfx = source;
+	}
 
 	//Attacks target
 	public abstract void Attack(BaseAI enemy);
@@ -100,6 +109,13 @@ public abstract class BaseAI : MonoBehaviour {
 				//Moves towards the target point
 				Vector2 newPos = Vector2.MoveTowards (gameObject.transform.position, tarPos, movSpd * Time.deltaTime);
 				gameObject.transform.position = newPos;
+				if (!sfx.isPlaying && Vector2.Distance (tarPos, gameObject.transform.position) > 0) {
+					sfx.clip = mov;
+					sfx.loop = true;
+					sfx.Play ();
+				} else if (Vector2.Distance (tarPos, gameObject.transform.position) == 0){
+					sfx.Stop ();
+				}
 			} else {
 				if (Vector2.Distance (gameObject.transform.position, atkTar.transform.position) >= atkDis) {
 					Vector2 enemyPos = atkTar.transform.transform.position;
@@ -107,12 +123,20 @@ public abstract class BaseAI : MonoBehaviour {
 					enemyPos = enemyPos - offset;
 					Vector2 newPos = Vector2.MoveTowards (gameObject.transform.position, enemyPos, movSpd * Time.deltaTime);
 					gameObject.transform.position = newPos;
+					if (!sfx.isPlaying) {
+						sfx.clip = mov;
+						sfx.loop = true;
+						sfx.Play ();
+					}
 				}
 
 				//Attacks enemy if able
 				if (atkTar != null && timeToAttack <= 0 && atkDis >= Vector2.Distance (gameObject.transform.position, atkTar.transform.position)) {
 					BaseAI enemy = atkTar.GetComponent<BaseAI> ();
 					Attack (enemy);
+					sfx.clip = hit;
+					sfx.loop = false;
+					sfx.Play ();
 				}
 			}
 

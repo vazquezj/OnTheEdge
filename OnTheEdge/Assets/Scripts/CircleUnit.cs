@@ -28,6 +28,7 @@ public class CircleUnit : BaseAI {
 		this.SetAtkDmg (1f);
 		this.SetAtkCld (2f);
 		this.SetPriority (1);
+		this.SetSource (gameObject.GetComponent<AudioSource> ());
 	}
 }
 

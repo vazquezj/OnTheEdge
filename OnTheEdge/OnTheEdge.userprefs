@@ -1,14 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TriangleUnit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BaseAI.cs">
     <Files>
-      <File FileName="Assets\Scripts\BaseAI.cs" Line="134" Column="24" />
-      <File FileName="Assets\Scripts\BasicUnit.cs" Line="3" Column="17" />
+      <File FileName="Assets\Scripts\BaseAI.cs" Line="116" Column="75" />
+      <File FileName="Assets\Scripts\BasicUnit.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AtkBooster.cs" Line="15" Column="34" />
-      <File FileName="Assets\Scripts\CircleUnit.cs" Line="17" Column="39" />
-      <File FileName="Assets\Scripts\SquareUnit.cs" Line="8" Column="45" />
-      <File FileName="Assets\Scripts\TriangleUnit.cs" Line="12" Column="24" />
-      <File FileName="Assets\Scripts\Projectile.cs" Line="14" Column="49" />
+      <File FileName="Assets\Scripts\CircleUnit.cs" Line="29" Column="23" />
+      <File FileName="Assets\Scripts\SquareUnit.cs" Line="31" Column="60" />
+      <File FileName="Assets\Scripts\TriangleUnit.cs" Line="21" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
