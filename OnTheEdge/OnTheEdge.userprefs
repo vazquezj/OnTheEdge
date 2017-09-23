@@ -1,15 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\StartMenu.cs">
-    <Files>
-      <File FileName="Assets\Scripts\StartMenu.cs" Line="22" Column="32" />
-=======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnerForAttacker.cs">
     <Files>
-      <File FileName="Assets\Scripts\SpawnerForAttacker.cs" Line="26" Column="19" />
-      <File FileName="Assets\Scripts\SpawnerForDefender.cs" Line="1" Column="1" />
->>>>>>> origin/Alex's-Branch
+      <File FileName="Assets\Scripts\SpawnerForAttacker.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
