@@ -29,6 +29,7 @@ public class TriangleUnit : BaseAI {
 		this.SetAtkCld (1.5f);
 		this.SetPriority (1);
 		this.SetSource (gameObject.GetComponent<AudioSource> ());
+		this.manager = GameObject.Find ("GUI").GetComponent<ScoreManager>();
 	}
 }
 
