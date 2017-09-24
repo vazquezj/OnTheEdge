@@ -4,25 +4,16 @@ using UnityEngine;
 
 public class AtkBooster : MonoBehaviour {
 
-	//Variable used for attack boost
-	float boost = 5;
+	//Timer to refresh atk boost to
+	float boostTime = 10f;
 
-	//Adds damage bonus to ally on entering the collider
-	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("Test");
+	//Refreshes damage boost timer on all allies in the collider
+	void OnTriggerStay2D(Collider2D other) {
 		BaseAI unit = other.gameObject.GetComponent<BaseAI> ();
 		if (other.tag == this.tag && unit != null) {
+			unit.SetBoost (true);
+			unit.SetBoostTime (boostTime);
 			Debug.Log ("Boosted");
-			unit.SetAtkDmg (unit.GetAtkDmg () + boost);
-		}
-	}
-
-	//Removes bonus upon leaving the collider
-	void OnTriggerExit2D(Collider2D other) {
-		Debug.Log ("test");
-		BaseAI unit = other.gameObject.GetComponent<BaseAI> ();
-		if (other.tag == this.tag && unit != null) {
-			unit.SetAtkDmg (unit.GetAtkDmg () - boost);
 		}
 	}
 }

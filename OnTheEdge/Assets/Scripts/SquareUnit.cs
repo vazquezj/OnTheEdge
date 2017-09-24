@@ -7,7 +7,11 @@ public class SquareUnit : BaseAI {
 	//Attacks target
 	public override void Attack(BaseAI enemy) {
 		if (atkTar != null) {
-			enemy.TakeDamage (this.GetAtkDmg());
+			if (this.GetBoosted ()) {
+				enemy.TakeDamage (this.GetAtkDmg () + 1);
+			} else {
+				enemy.TakeDamage (this.GetAtkDmg ());
+			}
 			if (enemy.GetHealth() <= 0)
 				atkTar = null;
 			this.SetCooldown(this.GetAtkCld());
@@ -24,6 +28,7 @@ public class SquareUnit : BaseAI {
 		this.SetAtkDmg (2f);
 		this.SetAtkCld (2f);
 		this.SetPriority (1);
+		this.SetSource (gameObject.GetComponent<AudioSource> ());
 	}
 }
 
