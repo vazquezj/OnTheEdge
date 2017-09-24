@@ -8,6 +8,7 @@ public abstract class BaseAI : MonoBehaviour {
 	//Public targets for attacking and general movement, as well as owner tag
 	public Vector2 tarPos;
 	public GameObject atkTar = null;
+	public ScoreManager manager;
 
 	//Public variables for SFX
 	public AudioClip hit;
@@ -148,6 +149,8 @@ public abstract class BaseAI : MonoBehaviour {
 
 			//Temporary death effect
 		} else {
+			if (this.tag == "Player")
+				manager.resource += 1;
 			GameObject.Destroy (gameObject);
 		}
 	}

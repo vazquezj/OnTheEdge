@@ -29,6 +29,7 @@ public class SquareUnit : BaseAI {
 		this.SetAtkCld (2f);
 		this.SetPriority (1);
 		this.SetSource (gameObject.GetComponent<AudioSource> ());
+		this.manager = GameObject.Find ("GUI").GetComponent<ScoreManager>();
 	}
 }
 
