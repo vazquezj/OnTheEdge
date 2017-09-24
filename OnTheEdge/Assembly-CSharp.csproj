@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\GUI Scripts\GameOverScript.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\StartMenu.cs" />
+     <Compile Include="Assets\Scripts\PopupTextController.cs" />
+     <Compile Include="Assets\Scripts\PopupTextScript.cs" />
      <Compile Include="Assets\Scripts\RegenTile.cs" />
      <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
      <Compile Include="Assets\Scripts\SpawnerForAttacker.cs" />
