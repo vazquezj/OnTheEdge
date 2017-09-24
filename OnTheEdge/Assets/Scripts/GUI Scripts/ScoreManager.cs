@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour {
 
 	public static int score;
+	public int resource;
 	public GUISkin myGUISkin;
 
 	void Awake ()
@@ -17,6 +18,11 @@ public class ScoreManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.KeypadEnter))
 		{
 			score += 1;
+			resource += 1;
+		}
+		if (Input.GetKeyDown (KeyCode.KeypadMinus))
+		{
+			resource -= 1;
 		}
 	}
 
@@ -24,5 +30,6 @@ public class ScoreManager : MonoBehaviour {
 	{
 		GUI.skin = myGUISkin;
 		GUI.Label (new Rect (50, 50, 300, 100), "SCORE: " + score);
+		GUI.Label (new Rect (50, 150, 400, 100), "RESOURCE: " + resource);
 	}
 }
