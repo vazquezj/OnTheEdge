@@ -16,5 +16,7 @@ public class Barricade : BaseAI {
 		this.SetAtkDmg (0);
 		this.SetAtkCld (10000f);
 		this.SetPriority (1);
+		this.SetSource (gameObject.GetComponent<AudioSource> ());
+		this.manager = GameObject.Find ("GUI").GetComponent<ScoreManager>();
 	}
 }
