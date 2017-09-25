@@ -20,7 +20,6 @@ public class StartMenu : MonoBehaviour {
 		//Start Menu Button and Text
 		if (GUI.Button (new Rect (708, 600, 200, 100), "START!"))
 		{
-			Time.timeScale = 1.0f;
 			Destroy (this);
 		}
 	}

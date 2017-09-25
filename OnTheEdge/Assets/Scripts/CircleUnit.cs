@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CircleUnit : BaseAI {
-		
+
 	//Attacks target
 	public override void Attack(BaseAI enemy) {
 		if (atkTar != null) {
@@ -12,7 +12,7 @@ public class CircleUnit : BaseAI {
 			} else {
 				enemy.TakeDamage (this.GetAtkDmg ());
 			}
-			if (enemy.GetHealth () <= 0)
+			if (enemy.GetHealth() <= 0)
 				atkTar = null;
 			this.SetCooldown(this.GetAtkCld());
 			Debug.Log (enemy.GetHealth());
