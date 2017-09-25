@@ -113,7 +113,7 @@ public abstract class BaseAI : MonoBehaviour {
 				if (!sfx.isPlaying && Vector2.Distance (tarPos, gameObject.transform.position) > 0) {
 					sfx.clip = mov;
 					sfx.loop = true;
-					sfx.Play ();
+					//sfx.Play ();
 				} else if (Vector2.Distance (tarPos, gameObject.transform.position) == 0){
 					sfx.Stop ();
 				}
@@ -127,7 +127,7 @@ public abstract class BaseAI : MonoBehaviour {
 					if (!sfx.isPlaying) {
 						sfx.clip = mov;
 						sfx.loop = true;
-						sfx.Play ();
+						//sfx.Play ();
 					}
 				}
 

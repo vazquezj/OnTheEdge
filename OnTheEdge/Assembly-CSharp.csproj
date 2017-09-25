@@ -63,7 +63,6 @@
      <Compile Include="Assets\Scripts\PopupTextScript.cs" />
      <Compile Include="Assets\Scripts\RegenTile.cs" />
      <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
-     <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\SpawnerForAttacker.cs" />
      <Compile Include="Assets\Scripts\SpawnerForDefender.cs" />
      <Compile Include="Assets\Scripts\SquareUnit.cs" />
