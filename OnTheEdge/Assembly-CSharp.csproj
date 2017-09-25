@@ -56,16 +56,16 @@
      <Compile Include="Assets\Scripts\BaseAI.cs" />
      <Compile Include="Assets\Scripts\BasicUnit.cs" />
      <Compile Include="Assets\Scripts\CircleUnit.cs" />
-     <Compile Include="Assets\Scripts\GUI Scripts\GameOverScript.cs" />
-     <Compile Include="Assets\Scripts\GUI Scripts\ScoreManager.cs" />
-     <Compile Include="Assets\Scripts\GUI Scripts\StartMenu.cs" />
+     <Compile Include="Assets\Scripts\GameOverScript.cs" />
      <Compile Include="Assets\Scripts\PopupTextController.cs" />
      <Compile Include="Assets\Scripts\PopupTextScript.cs" />
      <Compile Include="Assets\Scripts\RegenTile.cs" />
      <Compile Include="Assets\Scripts\ResourceGenerator.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\SpawnerForAttacker.cs" />
      <Compile Include="Assets\Scripts\SpawnerForDefender.cs" />
      <Compile Include="Assets\Scripts\SquareUnit.cs" />
+     <Compile Include="Assets\Scripts\StartMenu.cs" />
      <Compile Include="Assets\Scripts\TriangleUnit.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

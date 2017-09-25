@@ -5,6 +5,8 @@ using UnityEngine;
 
 public abstract class BaseAI : MonoBehaviour {
 
+	public ScoreManager scoreManager;
+
 	//Public targets for attacking and general movement, as well as owner tag
 	public Vector2 tarPos;
 	public GameObject atkTar = null;
@@ -92,6 +94,11 @@ public abstract class BaseAI : MonoBehaviour {
 		this.sfx = source;
 	}
 
+	void Awake ()
+	{
+		scoreManager = GetComponent <ScoreManager> ();
+	}
+
 	//Attacks target
 	public abstract void Attack(BaseAI enemy);
 	
@@ -148,6 +155,8 @@ public abstract class BaseAI : MonoBehaviour {
 
 			//Temporary death effect
 		} else {
+			ScoreManager.score += 1;
+			ScoreManager.resource += 1;
 			GameObject.Destroy (gameObject);
 		}
 	}

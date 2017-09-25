@@ -12,7 +12,7 @@ public class TriangleUnit : BaseAI {
 			} else {
 				enemy.TakeDamage (this.GetAtkDmg ());
 			}
-			if (enemy.GetHealth() <= 0)
+			if (enemy.GetHealth () <= 0)
 				atkTar = null;
 			this.SetCooldown(this.GetAtkCld());
 			Debug.Log (enemy.GetHealth());
