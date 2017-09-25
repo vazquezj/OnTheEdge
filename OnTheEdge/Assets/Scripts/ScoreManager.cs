@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour {
 
 	public static int score;
-	public int resource;
+	public static int resource;
 	public GUISkin myGUISkin;
 
 	void Awake ()
