@@ -15,7 +15,6 @@ public class TriangleUnit : BaseAI {
 			if (enemy.GetHealth() <= 0)
 				atkTar = null;
 			this.SetCooldown(this.GetAtkCld());
-			Debug.Log (enemy.GetHealth());
 		}
 	}
 
