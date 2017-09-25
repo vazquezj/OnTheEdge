@@ -21,7 +21,7 @@ public class CircleUnit : BaseAI {
 
 	// Use this for initialization
 	void Start () {
-		this.SetMovSpd (.5f);
+		this.SetMovSpd (2f);
 		this.SetAtkDis (.5f);
 		this.SetMaxHealth (1f);
 		this.SetHealth (1f);

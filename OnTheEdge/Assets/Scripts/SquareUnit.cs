@@ -15,13 +15,13 @@ public class SquareUnit : BaseAI {
 			if (enemy.GetHealth() <= 0)
 				atkTar = null;
 			this.SetCooldown(this.GetAtkCld());
-			Debug.Log (enemy.GetHealth());
+			//Debug.Log (enemy.GetHealth());
 		}
 	}
 
 	// Use this for initialization
 	void Start () {
-		this.SetMovSpd (.5f);
+		this.SetMovSpd (.75f);
 		this.SetAtkDis (.5f);
 		this.SetMaxHealth (4f);
 		this.SetHealth (4f);

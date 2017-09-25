@@ -21,7 +21,7 @@ public class TriangleUnit : BaseAI {
 
 	// Use this for initialization
 	void Start () {
-		this.SetMovSpd (1f);
+		this.SetMovSpd (1.25f);
 		this.SetAtkDis (.5f);
 		this.SetMaxHealth (2f);
 		this.SetHealth (2f);

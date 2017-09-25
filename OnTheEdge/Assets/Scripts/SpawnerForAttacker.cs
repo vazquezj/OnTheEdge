@@ -12,23 +12,13 @@ public class SpawnerForAttacker : MonoBehaviour {
 	public GameObject[] whatToSpawnPrefab;
 	public GameObject[] spawnLocations;
 
-
 	void Update(){
 
 		//checks if keypade 1 is pressed
 		if (Input.GetKeyDown (KeyCode.Keypad1)) {
 
-			//gets the mouse position for 2d
-			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			//sets the z position to 0
-			mousePos.z = 0;
-			//sets the y position to the bottom of the screen
-			mousePos.y = -4;
-			Debug.Log (mousePos.x);
-			Debug.Log (mousePos.y);
-
-			//Instantiates and object from whatToSpawnPrefabs array list at (mouse's x , -4.5, 0)
-			Instantiate (whatToSpawnPrefab [0], mousePos, Quaternion.identity);
+			//Instantiates and object from whatToSpawnPrefabs array list at the position from SpawnLocations array
+			Instantiate (whatToSpawnPrefab [0], spawnLocations[0].transform.position, Quaternion.identity);
 
 			//when resources are added remove comment to have them spent for spawning.
 			//resources --;
@@ -39,17 +29,8 @@ public class SpawnerForAttacker : MonoBehaviour {
 		//checks if keypade 2 is pressed
 		if (Input.GetKeyDown (KeyCode.Keypad2)) {
 
-			//gets the mouse position for 2d
-			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			//sets the z position to 0
-			mousePos.z = 0;
-			//sets the y position to the bottom of the screen
-			mousePos.y = -4;
-			Debug.Log (mousePos.x);
-			Debug.Log (mousePos.y);
-
-			//Instantiates and object from whatToSpawnPrefabs array list at (mouse's x , -4.5, 0)
-			Instantiate (whatToSpawnPrefab [0], mousePos, Quaternion.identity);
+			//Instantiates and object from whatToSpawnPrefabs array list at the position from SpawnLocations array
+			Instantiate (whatToSpawnPrefab [1], spawnLocations[0].transform.position, Quaternion.identity);
 
 			//when resources are added remove comment to have them spent for spawning.
 			//resources --;
@@ -60,20 +41,43 @@ public class SpawnerForAttacker : MonoBehaviour {
 		//checks if keypade 3 is pressed
 		if (Input.GetKeyDown (KeyCode.Keypad3)) {
 
-			//gets the mouse position for 2d
-			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			//sets the z position to 0
-			mousePos.z = 0;
-			//sets the y position to the bottom of the screen
-			mousePos.y = -4;
-
-			//Instantiates and object from whatToSpawnPrefabs array list at (mouse's x , -4.5, 0)
-			Instantiate (whatToSpawnPrefab [0], mousePos, Quaternion.identity);
+			//Instantiates and object from whatToSpawnPrefabs array list at the position from SpawnLocations array
+			Instantiate (whatToSpawnPrefab [2], spawnLocations[0].transform.position, Quaternion.identity);
 
 			//when resources are added remove comment to have them spent for spawning.
 			//resources --;
 
 		}// if keypade 3 down end
+
+		if (Input.GetKeyDown (KeyCode.Keypad4)) {
+
+			//Instantiates and object from whatToSpawnPrefabs array list at the position from SpawnLocations array
+			Instantiate (whatToSpawnPrefab [3], spawnLocations[0].transform.position, Quaternion.identity);
+
+			//when resources are added remove comment to have them spent for spawning.
+			//resources --;
+
+		}// if keypade 4 down end
+
+		if (Input.GetKeyDown (KeyCode.Keypad5)) {
+
+			//Instantiates and object from whatToSpawnPrefabs array list at the position from SpawnLocations array
+			Instantiate (whatToSpawnPrefab [4], spawnLocations[0].transform.position, Quaternion.identity);
+
+			//when resources are added remove comment to have them spent for spawning.
+			//resources --;
+
+		}// if keypade 5 down end
+
+		if (Input.GetKeyDown (KeyCode.Keypad6)) {
+
+			//Instantiates and object from whatToSpawnPrefabs array list at the position from SpawnLocations array
+			Instantiate (whatToSpawnPrefab [5], spawnLocations[0].transform.position, Quaternion.identity);
+
+			//when resources are added remove comment to have them spent for spawning.
+			//resources --;
+
+		}// if keypade 6 down end
 
 	}// update end
 }

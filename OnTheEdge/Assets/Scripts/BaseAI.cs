@@ -157,7 +157,7 @@ public abstract class BaseAI : MonoBehaviour {
 		} else {
 			GameObject.Destroy (gameObject);
 			ScoreManager.score += 1;
-			ScoreManager.resource += 1;
+			ScoreManager.lines += 1;
 		}
 	}
 
