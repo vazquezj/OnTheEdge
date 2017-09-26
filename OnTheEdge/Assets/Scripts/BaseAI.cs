@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 [RequireComponent (typeof (AudioSource))]
 
 public abstract class BaseAI : MonoBehaviour {
@@ -28,7 +31,7 @@ public abstract class BaseAI : MonoBehaviour {
 	bool boosted;
 	AudioSource sfx;
 
-	public TowerHealth towerHealth;
+	//public TowerHealth towerHealth;
 
 	//Getter/setter functions
 	public float GetMovSpd() {
@@ -99,12 +102,12 @@ public abstract class BaseAI : MonoBehaviour {
 	void Awake ()
 	{
 		scoreManager = GetComponent <ScoreManager> ();
-		towerHealth = GetComponent <TowerHealth> ();
+		//towerHealth = GetComponent <TowerHealth> ();
 	}
 
 	//Attacks target
 	public abstract void Attack(BaseAI enemy);
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		//Makes sure ai does not do anything when dead (for death animations etc)
@@ -159,7 +162,8 @@ public abstract class BaseAI : MonoBehaviour {
 			//Temporary death effect
 		} else {
 			GameObject.Destroy (gameObject);
-			//ScoreManager.score += 1;
+			ScoreManager.attackerScore += 1;
+			ScoreManager.defenderScore += 1;
 		}
 	}
 
@@ -180,7 +184,7 @@ public abstract class BaseAI : MonoBehaviour {
 	{
 		if (other.tag == "Defender")
 		{
-			TowerHealth.health -= 1;
+			//TowerHealth.health -= 1;
 			Destroy (this.gameObject);
 		}
 	}

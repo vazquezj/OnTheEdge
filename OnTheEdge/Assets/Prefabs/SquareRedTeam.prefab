@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba65e4a16c22334c854fb683cac8d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
   tarPos: {x: 0, y: 0}
   atkTar: {fileID: 0}
   hit: {fileID: 8300000, guid: 030369955d45dd1499ba307d061792d7, type: 3}

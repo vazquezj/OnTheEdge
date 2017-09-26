@@ -1,8 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CircleUnit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnerForDefender.cs">
     <Files>
-      <File FileName="Assets\Scripts\CircleUnit.cs" Line="24" Column="22" />
+      <File FileName="Assets\Scripts\SpawnerForDefender.cs" Line="55" Column="4" />
+      <File FileName="Assets\Scripts\SpawnerForAttacker.cs" Line="80" Column="4" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="50" Column="21" />
+      <File FileName="Assets\Scripts\StartMenu.cs" Line="24" Column="17" />
+      <File FileName="Assets\Scripts\TowerHealth.cs" Line="8" Column="29" />
+      <File FileName="Assets\Scripts\BaseAI.cs" Line="166" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

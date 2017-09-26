@@ -31,4 +31,3 @@ public class CircleUnit : BaseAI {
 		this.SetSource (gameObject.GetComponent<AudioSource> ());
 	}
 }
-

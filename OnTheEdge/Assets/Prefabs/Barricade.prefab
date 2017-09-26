@@ -170,11 +170,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18093c15ff8ae68438a432c756ab2c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
   tarPos: {x: 0, y: 0}
   atkTar: {fileID: 0}
-  manager: {fileID: 0}
   hit: {fileID: 0}
   mov: {fileID: 0}
+  towerHealth: {fileID: 0}
 --- !u!212 &212954642572180052
 SpriteRenderer:
   m_ObjectHideFlags: 1
