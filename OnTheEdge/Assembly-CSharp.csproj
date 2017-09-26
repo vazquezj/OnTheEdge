@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\SpawnerForDefender.cs" />
      <Compile Include="Assets\Scripts\SquareUnit.cs" />
      <Compile Include="Assets\Scripts\StartMenu.cs" />
+     <Compile Include="Assets\Scripts\TowerHealth.cs" />
      <Compile Include="Assets\Scripts\TriangleUnit.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

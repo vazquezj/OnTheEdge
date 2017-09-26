@@ -12,11 +12,8 @@ public class GameOverScript : MonoBehaviour {
 		gameOverSprite = this.gameObject.GetComponent <SpriteRenderer> ();
 	}
 
-	void Update ()
+	public void GameOver ()
 	{
-		if (Input.GetKeyDown (KeyCode.T))
-		{
-			gameOverSprite.enabled = !gameOverSprite.enabled;
-		}
+		gameOverSprite.enabled = true;
 	}
 }

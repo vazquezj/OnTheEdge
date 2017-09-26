@@ -16,9 +16,9 @@ public class StartMenu : MonoBehaviour {
 		//Changes the GUI Skin
 		GUI.skin = myGUISkin;
 		//Start Menu Box and Text
-		GUI.Box (new Rect (50, 50, 1516, 810), "ON THE EDGE");
+		GUI.Box (new Rect (50, 50, 1640, 810), "ON THE EDGE");
 		//Start Menu Button and Text
-		if (GUI.Button (new Rect (708, 600, 200, 100), "START!"))
+		if (GUI.Button (new Rect (795, 600, 150, 100), "START!"))
 		{
 			Time.timeScale = 1.0f;
 			Destroy (this);

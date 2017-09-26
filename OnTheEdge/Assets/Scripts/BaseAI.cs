@@ -28,6 +28,8 @@ public abstract class BaseAI : MonoBehaviour {
 	bool boosted;
 	AudioSource sfx;
 
+	public TowerHealth towerHealth;
+
 	//Getter/setter functions
 	public float GetMovSpd() {
 		return movSpd;
@@ -97,6 +99,7 @@ public abstract class BaseAI : MonoBehaviour {
 	void Awake ()
 	{
 		scoreManager = GetComponent <ScoreManager> ();
+		towerHealth = GetComponent <TowerHealth> ();
 	}
 
 	//Attacks target
@@ -156,8 +159,7 @@ public abstract class BaseAI : MonoBehaviour {
 			//Temporary death effect
 		} else {
 			GameObject.Destroy (gameObject);
-			ScoreManager.score += 1;
-			ScoreManager.lines += 1;
+			//ScoreManager.score += 1;
 		}
 	}
 
@@ -171,6 +173,15 @@ public abstract class BaseAI : MonoBehaviour {
 			} 
 		} else if (newEnemy != null && other.tag != this.tag && newEnemy.health > 0) {
 			atkTar = other.gameObject;
+		}
+	}
+
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		if (other.tag == "Defender")
+		{
+			TowerHealth.health -= 1;
+			Destroy (this.gameObject);
 		}
 	}
 }

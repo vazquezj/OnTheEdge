@@ -4,32 +4,27 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
 
-	public static int score;
-	public static int lines;
+	public static int attackerScore;
+	public static int attackerLines;
+	public static int defenderScore;
+	public static int defenderLines;
 	public GUISkin myGUISkin;
 
 	void Awake ()
 	{
-		score = 0;
-	}
-
-	void Update ()
-	{
-		if (Input.GetKeyDown (KeyCode.KeypadEnter))
-		{
-			score += 1;
-			lines += 1;
-		}
-		if (Input.GetKeyDown (KeyCode.KeypadMinus))
-		{
-			lines -= 1;
-		}
+		attackerScore = 0;
+		attackerLines = 0;
+		defenderScore = 0;
+		defenderLines = 0;
 	}
 
 	void OnGUI ()
 	{
 		GUI.skin = myGUISkin;
-		GUI.Label (new Rect (50, 50, 300, 100), "SCORE: " + score);
-		GUI.Label (new Rect (50, 150, 400, 100), "LINES: " + lines);
+		GUI.Label (new Rect (50, 50, 400, 100), "ATTACKER SCORE: " + attackerScore);
+		GUI.Label (new Rect (50, 150, 400, 100), "ATTACKER LINES: " + attackerLines);
+		GUI.Label (new Rect (1300, 50, 400, 100), "DEFENDER SCORE: " + defenderScore);
+		GUI.Label (new Rect (1300, 150, 400, 100), "DEFENDER LINES: " + defenderLines);
+
 	}
 }
